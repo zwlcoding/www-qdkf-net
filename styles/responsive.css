@@ -26,6 +26,7 @@
     height: 56px;
   }
   
+  .navbar-brand-logo,
   .navbar-brand-icon {
     width: 36px;
     height: 36px;
@@ -210,6 +211,21 @@
     font-size: var(--text-lg);
   }
 }
+
+  /* ===== 产品展示区 ===== */
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+  
+  .product-card {
+    padding: var(--space-6);
+  }
+  
+  .product-card-icon {
+    width: 56px;
+    height: 56px;
+  }
 
 /* ========== 小屏手机 ========== */
 @media (max-width: 375px) {

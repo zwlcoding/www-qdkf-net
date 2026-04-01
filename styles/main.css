@@ -24,6 +24,7 @@ body {
   background-color: var(--color-rice-paper);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 /* ========== 通用容器 ========== */

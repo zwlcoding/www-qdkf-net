@@ -46,6 +46,13 @@
   transform: scale(1.02);
 }
 
+.navbar-brand-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+}
+
 .navbar-brand-icon {
   width: 40px;
   height: 40px;
