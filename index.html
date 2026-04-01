@@ -1,137 +1,243 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>渊渟 - 执经衡门，渊渟岳立</title>
-    <style>
-        html{
-            font-family: system-ui, sans-serif;
-            background: #13151a;
-        }
-        main {
-            margin: auto;
-            padding: 1rem;
-            width: 800px;
-            max-width: calc(100% - 2rem);
-            color: white;
-            font-size: 20px;
-            line-height: 1.6;
-        }
-        h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
-    .link-card {
-		list-style: none;
-		display: flex;
-		padding: 1px;
-		background-color: #23262d;
-		background-image: none;
-		background-size: 400%;
-		border-radius: 7px;
-		background-position: 100%;
-		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-	}
-	.link-card > a {
-		width: 100%;
-		text-decoration: none;
-		line-height: 1.4;
-		padding: calc(1.5rem - 1px);
-		border-radius: 8px;
-		color: white;
-		background-color: #23262d;
-		opacity: 0.8;
-	}
-	h2 {
-		margin: 0;
-		font-size: 1.25rem;
-		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-	}
-	p {
-		margin-top: 0.5rem;
-		margin-bottom: 0;
-	}
-	.link-card:is(:hover, :focus-within) {
-		background-position: 0;
-		background-image: var(--accent-gradient);
-	}
-	.link-card:is(:hover, :focus-within) h2 {
-		color: rgb(var(--accent-light));
-	}
-    footer{
-        text-align: center;
-        position: fixed;
-		left: 0;
-		right: 0;
-		bottom: 5px;
-    }
-	footer a{
-		color: #999;
-		font-size: 12px;
-	}
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="渊渟集团 - 执经衡门，渊渟岳立。秉持东方智慧，以静水流深之姿，蓄力待发之势，追求过程体验的卓越企业。">
+  <meta name="keywords" content="渊渟集团,东方禅意,企业管理,反内卷,过程体验">
+  <title>渊渟集团 - 执经衡门，渊渟岳立</title>
+  
+  <!-- 字体 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- 样式 -->
+  <link rel="stylesheet" href="styles/variables.css">
+  <link rel="stylesheet" href="styles/animations.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/navbar.css">
+  <link rel="stylesheet" href="styles/hero.css">
+  <link rel="stylesheet" href="styles/content.css">
+  <link rel="stylesheet" href="styles/footer.css">
+  <link rel="stylesheet" href="styles/responsive.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>渟</text></svg>">
 </head>
 <body>
-    <main>
-		<h1>我的项目</h1>
-        <ul class="link-card-grid">
-            <li class="link-card">
-                <a href="#">
-                    <h2>
-                        我的博客
-                        <span>&rarr;</span>
-                    </h2>
-                    <p>
-                        懒人写博客，纯看心情
-                    </p>
-                </a>
-            </li>
-		
-		<li class="link-card">
-			<a href="https://yao.qdkf.net" target="_blank" rel="noopener noreferrer">
-				<h2>
-					六爻预测
-					<span>&rarr;</span>
-				</h2>
-				<p>
-					基于六爻的在线预测工具
-				</p>
-			</a>
-		</li>
-		
+  
+  <!-- ========== 导航栏 ========== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar-container">
+      <a href="#" class="navbar-brand">
+        <span class="navbar-brand-icon">渟</span>
+        <span class="navbar-brand-text">渊渟</span>
+      </a>
+      
+      <nav class="navbar-nav" id="navbarNav">
+        <ul class="navbar-menu">
+          <li><a href="#hero" class="navbar-link active">首页</a></li>
+          <li><a href="#philosophy" class="navbar-link">理念</a></li>
+          <li><a href="#management" class="navbar-link">管理</a></li>
+          <li><a href="#footer" class="navbar-link">联系</a></li>
         </ul>
-		<h2>开源工具</h2>
-		 <ul class="link-card-grid">
-		<li class="link-card">
-				<a href="#">
-                    <h2>
-                        暂无
-                        <span>&rarr;</span>
-                    </h2>
-                    <p>
-                        暂无
-                    </p>
-                </a>
-		</li>
-
-		
-        </ul>
-    </main>
-    <footer><a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备18070331号-1</a></footer>
-    <script defer src="https://umami.qdkf.net/script.js" data-website-id="f23677cc-0691-4c86-834e-5c3d16fc3762"></script>
+      </nav>
+      
+      <button class="navbar-toggle" id="navbarToggle" aria-label="切换导航">
+        <span class="navbar-toggle-bar"></span>
+        <span class="navbar-toggle-bar"></span>
+        <span class="navbar-toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+  
+  <!-- ========== 遮罩层（移动端菜单用） ========== -->
+  <div class="navbar-overlay" id="navbarOverlay"></div>
+  
+  <!-- ========== Hero 主视觉区 ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span class="hero-title-main js-animate-fade-up">渊渟</span>
+        </h1>
+        <p class="hero-subtitle js-animate-fade-up stagger-2">执经衡门，渊渟岳立</p>
+        <p class="hero-description js-animate-fade-up stagger-3">
+          静水流深，蓄力待发<br>
+          在浮躁的时代，我们选择沉淀
+        </p>
+        <div class="hero-cta js-animate-fade-up stagger-4">
+          <a href="#philosophy" class="btn btn-primary">探索理念</a>
+          <a href="#management" class="btn btn-secondary">了解管理</a>
+        </div>
+      </div>
+    </div>
+    
+    <a href="#philosophy" class="hero-scroll" aria-label="向下滚动">
+      <svg class="hero-scroll-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+      </svg>
+    </a>
+  </section>
+  
+  <!-- ========== 哲学理念区 ========== -->
+  <section class="philosophy section" id="philosophy">
+    <div class="container">
+      <header class="section-header js-animate-fade-up">
+        <span class="section-tag">核心理念</span>
+        <h2 class="section-title">静水流深</h2>
+        <p class="section-desc">源自晋·葛洪《抱朴子》，诠释我们的经营哲学</p>
+      </header>
+      
+      <div class="philosophy-grid">
+        <article class="philosophy-card js-animate-scale stagger-1">
+          <div class="philosophy-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 6v6l4 2"/>
+            </svg>
+          </div>
+          <h3 class="philosophy-card-title">渊 · 深水</h3>
+          <p class="philosophy-card-desc">
+            表面平静，内有乾坤。我们不追求表面的喧嚣，而专注于内在的积累与沉淀。
+          </p>
+        </article>
+        
+        <article class="philosophy-card js-animate-scale stagger-2">
+          <div class="philosophy-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2v6m0 12v2m-6-8h2m12 0h2M4.93 4.93l4.24 4.24m5.66 5.66l4.24 4.24M4.93 19.07l4.24-4.24m5.66-5.66l4.24-4.24"/>
+            </svg>
+          </div>
+          <h3 class="philosophy-card-title">渟 · 积水</h3>
+          <p class="philosophy-card-desc">
+            水积聚而不流，蓄力待发。在恰当的时机到来之前，我们耐心积累，厚积薄发。
+          </p>
+        </article>
+        
+        <article class="philosophy-card js-animate-scale stagger-3">
+          <div class="philosophy-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 3v18m-6-6l6 6 6-6"/>
+            </svg>
+          </div>
+          <h3 class="philosophy-card-title">过程体验</h3>
+          <p class="philosophy-card-desc">
+            相比结果，我们更看重过程。让每一个当下都值得回味，让每一段经历都有意义。
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ========== 管理风格区 ========== -->
+  <section class="management section" id="management">
+    <div class="container">
+      <header class="section-header js-animate-fade-up">
+        <span class="section-tag">管理风格</span>
+        <h2 class="section-title">增本降效</h2>
+        <p class="section-desc">反内卷、反996，我们选择与主流背道而驰的管理哲学</p>
+      </header>
+      
+      <div class="management-list">
+        <!-- 对比项1 -->
+        <div class="management-item">
+          <div class="management-content js-animate-fade-left">
+            <span class="management-label management-label--traditional">传统公司</span>
+            <h3 class="management-title">KPI 驱动</h3>
+            <p class="management-desc">指标至上，数字说话，员工成为达成目标的工具</p>
+          </div>
+          <div class="management-vs">
+            <span class="management-vs-text">VS</span>
+          </div>
+          <div class="management-content management-content--highlight js-animate-fade-right">
+            <span class="management-label management-label--yuanting">渊渟集团</span>
+            <h3 class="management-title">"别太累，差不多就行"</h3>
+            <p class="management-desc">人不是机器，张弛有度才能持续创造价值</p>
+          </div>
+        </div>
+        
+        <!-- 对比项2 -->
+        <div class="management-item management-item--reverse">
+          <div class="management-content management-content--highlight js-animate-fade-left">
+            <span class="management-label management-label--yuanting">渊渟集团</span>
+            <h3 class="management-title">到点赶人下班</h3>
+            <p class="management-desc">工作生活要平衡，加班不是美德，效率才是</p>
+          </div>
+          <div class="management-vs">
+            <span class="management-vs-text">VS</span>
+          </div>
+          <div class="management-content js-animate-fade-right">
+            <span class="management-label management-label--traditional">传统公司</span>
+            <h3 class="management-title">996 福报</h3>
+            <p class="management-desc">用时间堆砌产出，以加班衡量态度</p>
+          </div>
+        </div>
+        
+        <!-- 对比项3 -->
+        <div class="management-item">
+          <div class="management-content js-animate-fade-left">
+            <span class="management-label management-label--traditional">传统公司</span>
+            <h3 class="management-title">降本增效</h3>
+            <p class="management-desc">压缩成本，追求极致的人效比</p>
+          </div>
+          <div class="management-vs">
+            <span class="management-vs-text">VS</span>
+          </div>
+          <div class="management-content management-content--highlight js-animate-fade-right">
+            <span class="management-label management-label--yuanting">渊渟集团</span>
+            <h3 class="management-title">增本降效</h3>
+            <p class="management-desc">资源管够，慢慢做。超配资源，让团队无聊到只能创新</p>
+          </div>
+        </div>
+        
+        <!-- 对比项4 -->
+        <div class="management-item management-item--reverse">
+          <div class="management-content management-content--highlight js-animate-fade-left">
+            <span class="management-label management-label--yuanting">渊渟集团</span>
+            <h3 class="management-title">过程体验导向</h3>
+            <p class="management-desc">享受做事的过程，结果自然而来。优雅地失败，胜过狼狈地成功</p>
+          </div>
+          <div class="management-vs">
+            <span class="management-vs-text">VS</span>
+          </div>
+          <div class="management-content js-animate-fade-right">
+            <span class="management-label management-label--traditional">传统公司</span>
+            <h3 class="management-title">结果导向</h3>
+            <p class="management-desc">只看结果，不问过程，成王败寇</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ========== 页脚 ========== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="footer-brand-icon">渟</span>
+          <span class="footer-brand-text">渊渟集团</span>
+        </div>
+        <p class="footer-slogan">执经衡门，渊渟岳立</p>
+        <p class="footer-desc">在浮躁的时代，我们选择沉淀</p>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 渊渟集团 版权所有</p>
+        <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer" class="footer-beian">
+          粤ICP备18070331号-1
+        </a>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- ========== 脚本 ========== -->
+  <script src="scripts/scroll-animation.js"></script>
+  <script src="scripts/navbar.js"></script>
+  
+  <!-- 统计 -->
+  <script defer src="https://umami.qdkf.net/script.js" data-website-id="f23677cc-0691-4c86-834e-5c3d16fc3762"></script>
 </body>
 </html>
-
-
-

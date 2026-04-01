@@ -1,0 +1,227 @@
+/**
+ * 渊渟集团官网 - 响应式样式
+ * 断点：768px
+ */
+
+/* ========== 平板及以下 ========== */
+@media (max-width: 1024px) {
+  .philosophy-grid {
+    gap: var(--space-6);
+  }
+  
+  .philosophy-card {
+    padding: var(--space-8) var(--space-6);
+  }
+}
+
+/* ========== 移动端 ========== */
+@media (max-width: 768px) {
+  
+  /* ===== 导航栏 ===== */
+  .navbar {
+    height: 60px;
+  }
+  
+  .navbar.is-scrolled {
+    height: 56px;
+  }
+  
+  .navbar-brand-icon {
+    width: 36px;
+    height: 36px;
+    font-size: var(--text-lg);
+  }
+  
+  .navbar-brand-text {
+    font-size: var(--text-lg);
+  }
+  
+  .navbar-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 280px;
+    max-width: 80vw;
+    background-color: var(--color-rice-paper);
+    padding: 80px var(--space-6) var(--space-6);
+    transform: translateX(100%);
+    transition: transform var(--transition-normal) var(--ease-out);
+    z-index: var(--z-fixed);
+    box-shadow: var(--shadow-xl);
+  }
+  
+  .navbar-nav.is-open {
+    transform: translateX(0);
+  }
+  
+  .navbar-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+  
+  .navbar-link {
+    display: block;
+    width: 100%;
+    padding: var(--space-3) 0;
+    font-size: var(--text-lg);
+    border-bottom: 1px solid var(--color-light-gray);
+  }
+  
+  .navbar-link::after {
+    display: none;
+  }
+  
+  .navbar-toggle {
+    display: flex;
+    z-index: calc(var(--z-fixed) + 1);
+  }
+  
+  /* ===== Hero ===== */
+  .hero {
+    padding-top: 60px;
+    min-height: 100svh;
+  }
+  
+  .hero-title-main {
+    font-size: var(--text-4xl);
+    letter-spacing: 0.2em;
+  }
+  
+  .hero-subtitle {
+    font-size: var(--text-lg);
+  }
+  
+  .hero-description {
+    font-size: var(--text-base);
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  
+  .hero-cta .btn {
+    width: 100%;
+  }
+  
+  /* ===== 区块通用 ===== */
+  .section {
+    padding: var(--space-16) 0;
+  }
+  
+  .section-header {
+    margin-bottom: var(--space-10);
+  }
+  
+  .section-title {
+    font-size: var(--text-3xl);
+  }
+  
+  .section-desc {
+    font-size: var(--text-base);
+  }
+  
+  /* ===== 哲学理念区 ===== */
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+  
+  .philosophy-card {
+    padding: var(--space-8) var(--space-6);
+  }
+  
+  .philosophy-card-icon {
+    width: 48px;
+    height: 48px;
+  }
+  
+  /* ===== 管理风格区 ===== */
+  .management-list {
+    gap: var(--space-10);
+  }
+  
+  .management-item {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+  
+  .management-item--reverse {
+    direction: ltr;
+  }
+  
+  .management-item--reverse > * {
+    direction: ltr;
+  }
+  
+  /* 反转对比项的顺序，保持渊渟在左 */
+  .management-item--reverse .management-content--highlight {
+    order: 1;
+  }
+  
+  .management-item--reverse .management-vs {
+    order: 2;
+  }
+  
+  .management-item--reverse .management-content:not(.management-content--highlight) {
+    order: 3;
+  }
+  
+  .management-vs {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    order: 2;
+  }
+  
+  .management-content {
+    padding: var(--space-6);
+    order: 1;
+  }
+  
+  .management-content--highlight {
+    order: 3;
+  }
+  
+  .management-title {
+    font-size: var(--text-xl);
+  }
+  
+  /* ===== 页脚 ===== */
+  .footer {
+    padding: var(--space-16) 0 var(--space-6);
+  }
+  
+  .footer-brand-icon {
+    width: 40px;
+    height: 40px;
+    font-size: var(--text-xl);
+  }
+  
+  .footer-brand-text {
+    font-size: var(--text-xl);
+  }
+  
+  .footer-slogan {
+    font-size: var(--text-lg);
+  }
+}
+
+/* ========== 小屏手机 ========== */
+@media (max-width: 375px) {
+  .hero-title-main {
+    font-size: var(--text-3xl);
+  }
+  
+  .section-title {
+    font-size: var(--text-2xl);
+  }
+  
+  .btn {
+    padding: var(--space-3) var(--space-6);
+  }
+}

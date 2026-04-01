@@ -1,0 +1,163 @@
+/**
+ * 渊渟集团官网 - 导航栏样式
+ */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-fixed);
+  height: 80px;
+  transition: background-color var(--transition-normal) ease,
+              box-shadow var(--transition-normal) ease,
+              height var(--transition-normal) ease;
+}
+
+.navbar.is-scrolled {
+  background-color: rgba(250, 248, 245, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-sm);
+  height: 64px;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  height: 100%;
+}
+
+/* ========== 品牌 ========== */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  text-decoration: none;
+  color: var(--color-ink-black);
+  transition: transform var(--transition-fast) ease;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.02);
+}
+
+.navbar-brand-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-cinnabar);
+  color: var(--color-rice-paper);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  border-radius: var(--radius-md);
+}
+
+.navbar-brand-text {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+/* ========== 导航菜单 ========== */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.navbar-link {
+  position: relative;
+  font-size: var(--text-base);
+  color: var(--color-ink-black);
+  padding: var(--space-2) 0;
+  transition: color var(--transition-fast) ease;
+}
+
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-cinnabar);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-normal) var(--ease-out);
+}
+
+.navbar-link:hover,
+.navbar-link.active {
+  color: var(--color-cinnabar);
+}
+
+.navbar-link:hover::after,
+.navbar-link.active::after {
+  transform: scaleX(1);
+}
+
+/* ========== 移动端菜单按钮 ========== */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-2);
+  gap: 6px;
+}
+
+.navbar-toggle-bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-ink-black);
+  transition: transform var(--transition-normal) ease,
+              opacity var(--transition-normal) ease;
+  border-radius: 1px;
+}
+
+.navbar-toggle.is-active .navbar-toggle-bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.navbar-toggle.is-active .navbar-toggle-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.is-active .navbar-toggle-bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ========== 遮罩层 ========== */
+.navbar-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(26, 26, 26, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-normal) ease,
+              visibility var(--transition-normal) ease;
+  z-index: calc(var(--z-fixed) - 1);
+}
+
+.navbar-overlay.is-active {
+  opacity: 1;
+  visibility: visible;
+}

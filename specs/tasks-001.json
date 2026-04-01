@@ -1,0 +1,100 @@
+[
+  {
+    "id": "1.1",
+    "title": "创建CSS变量文件",
+    "description": "定义配色、字体、间距、阴影等CSS变量",
+    "status": "pending",
+    "assignee": "",
+    "output": "styles/variables.css"
+  },
+  {
+    "id": "1.2",
+    "title": "创建动画定义文件",
+    "description": "定义所有CSS动画（淡入、上浮、滑动等）",
+    "status": "pending",
+    "assignee": "",
+    "output": "styles/animations.css",
+    "dependencies": ["1.1"]
+  },
+  {
+    "id": "2.1",
+    "title": "重构HTML结构",
+    "description": "按规格重构index.html，划分各个section",
+    "status": "pending",
+    "assignee": "",
+    "output": "index.html",
+    "dependencies": ["1.1", "1.2"]
+  },
+  {
+    "id": "2.2",
+    "title": "实现导航栏",
+    "description": "固定导航，滚动背景变化，移动端菜单",
+    "status": "pending",
+    "assignee": "",
+    "output": "styles/navbar.css",
+    "dependencies": ["2.1"]
+  },
+  {
+    "id": "2.3",
+    "title": "实现Hero区",
+    "description": "全屏Hero，品牌展示，滚动指示器",
+    "status": "pending",
+    "assignee": "",
+    "output": "styles/hero.css",
+    "dependencies": ["2.1"]
+  },
+  {
+    "id": "2.4",
+    "title": "实现内容区",
+    "description": "哲学理念卡片 + 管理风格对比",
+    "status": "pending",
+    "assignee": "",
+    "output": "styles/content.css",
+    "dependencies": ["2.1"]
+  },
+  {
+    "id": "2.5",
+    "title": "实现页脚",
+    "description": "深色页脚，版权备案信息",
+    "status": "pending",
+    "assignee": "",
+    "output": "styles/footer.css",
+    "dependencies": ["2.1"]
+  },
+  {
+    "id": "3.1",
+    "title": "实现滚动触发动画",
+    "description": "元素进入视口时的淡入/滑动动画",
+    "status": "pending",
+    "assignee": "",
+    "output": "scripts/scroll-animation.js",
+    "dependencies": ["2.2", "2.3", "2.4", "2.5"]
+  },
+  {
+    "id": "3.2",
+    "title": "优化过渡效果",
+    "description": "导航、按钮、卡片的悬停过渡",
+    "status": "pending",
+    "assignee": "",
+    "output": "更新各CSS文件",
+    "dependencies": ["2.2", "2.3", "2.4", "2.5"]
+  },
+  {
+    "id": "4.1",
+    "title": "实现响应式布局",
+    "description": "768px断点，移动端适配",
+    "status": "pending",
+    "assignee": "",
+    "output": "styles/responsive.css",
+    "dependencies": ["2.2", "2.3", "2.4", "2.5"]
+  },
+  {
+    "id": "5.1",
+    "title": "测试与优化",
+    "description": "跨设备测试，性能优化",
+    "status": "pending",
+    "assignee": "",
+    "output": "更新各文件",
+    "dependencies": ["3.1", "3.2", "4.1"]
+  }
+]

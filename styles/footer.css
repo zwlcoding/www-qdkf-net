@@ -1,0 +1,78 @@
+/**
+ * 渊渟集团官网 - 页脚样式
+ */
+
+.footer {
+  background-color: var(--color-ink-black);
+  color: var(--color-rice-paper);
+  padding: var(--space-20) 0 var(--space-8);
+}
+
+.footer-content {
+  text-align: center;
+  margin-bottom: var(--space-16);
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.footer-brand-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-cinnabar);
+  color: var(--color-rice-paper);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  border-radius: var(--radius-md);
+}
+
+.footer-brand-text {
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.footer-slogan {
+  font-size: var(--text-xl);
+  font-weight: 500;
+  color: var(--color-rice-paper);
+  margin-bottom: var(--space-2);
+  letter-spacing: 0.15em;
+}
+
+.footer-desc {
+  font-size: var(--text-base);
+  color: rgba(250, 248, 245, 0.6);
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding-top: var(--space-8);
+  border-top: 1px solid rgba(250, 248, 245, 0.1);
+}
+
+.footer-copyright {
+  font-size: var(--text-sm);
+  color: rgba(250, 248, 245, 0.5);
+}
+
+.footer-beian {
+  font-size: var(--text-sm);
+  color: rgba(250, 248, 245, 0.5);
+  transition: color var(--transition-fast) ease;
+}
+
+.footer-beian:hover {
+  color: var(--color-cinnabar);
+}
