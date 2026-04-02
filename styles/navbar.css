@@ -9,6 +9,9 @@
   right: 0;
   z-index: var(--z-fixed);
   height: 80px;
+  /* 确保宽度始终等于视口宽度，不受页面横向滚动影响 */
+  width: 100%;
+  max-width: 100%;
   transition: background-color var(--transition-normal) ease,
               box-shadow var(--transition-normal) ease,
               height var(--transition-normal) ease;
@@ -165,9 +168,10 @@
   transition: opacity var(--transition-normal) ease,
               visibility var(--transition-normal) ease;
   z-index: calc(var(--z-fixed) - 1);
-  /* 确保不会导致横向溢出 */
-  width: auto;
-  height: auto;
+  /* 确保宽度始终等于视口宽度，不受页面横向滚动影响 */
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
 }
 
 .navbar-overlay.is-active {
