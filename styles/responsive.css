@@ -210,6 +210,16 @@
   .footer-slogan {
     font-size: var(--text-lg);
   }
+  
+  .footer-social {
+    gap: var(--space-6);
+    margin-top: var(--space-8);
+  }
+  
+  .footer-social-qrcode {
+    width: 100px;
+    height: 100px;
+  }
 }
 
   /* ===== 产品展示区 ===== */

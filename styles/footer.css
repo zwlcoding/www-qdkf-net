@@ -21,7 +21,8 @@
   margin-bottom: var(--space-6);
 }
 
-.footer-brand-icon {
+.footer-brand-icon,
+.footer-brand-logo {
   width: 48px;
   height: 48px;
   display: flex;
@@ -32,6 +33,11 @@
   font-size: var(--text-2xl);
   font-weight: 700;
   border-radius: var(--radius-md);
+}
+
+.footer-brand-logo {
+  background-color: transparent;
+  object-fit: contain;
 }
 
 .footer-brand-text {
@@ -51,6 +57,33 @@
 .footer-desc {
   font-size: var(--text-base);
   color: rgba(250, 248, 245, 0.6);
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-8);
+  margin-top: var(--space-10);
+}
+
+.footer-social-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.footer-social-qrcode {
+  width: 120px;
+  height: 120px;
+  border-radius: var(--radius-md);
+  background: white;
+  padding: 8px;
+}
+
+.footer-social-label {
+  font-size: var(--text-sm);
+  color: rgba(250, 248, 245, 0.7);
 }
 
 .footer-bottom {
