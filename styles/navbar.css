@@ -12,6 +12,8 @@
   /* 确保宽度始终等于视口宽度，不受页面横向滚动影响 */
   width: 100%;
   max-width: 100%;
+  /* 修复移动端横向滚动条：裁剪溢出的子元素 */
+  overflow: hidden;
   transition: background-color var(--transition-normal) ease,
               box-shadow var(--transition-normal) ease,
               height var(--transition-normal) ease;
