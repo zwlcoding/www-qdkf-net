@@ -235,6 +235,18 @@
     width: 56px;
     height: 56px;
   }
+  
+  /* 修复移动端横向滚动条问题 */
+  .js-animate-fade-right,
+  .js-animate-fade-left {
+    opacity: 1;
+    transform: translateY(20px);
+  }
+  
+  .js-animate-fade-right.is-visible,
+  .js-animate-fade-left.is-visible {
+    transform: translateY(0);
+  }
 }
 
 /* ========== 小屏手机 ========== */
