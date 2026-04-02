@@ -43,7 +43,7 @@
     right: 0;
     bottom: 0;
     width: 280px;
-    max-width: 80vw;
+    max-width: 80%;
     background-color: var(--color-rice-paper);
     padding: 80px var(--space-6) var(--space-6);
     transform: translateX(100%);
@@ -220,7 +220,6 @@
     width: 100px;
     height: 100px;
   }
-}
 
   /* ===== 产品展示区 ===== */
   .products-grid {
@@ -236,6 +235,7 @@
     width: 56px;
     height: 56px;
   }
+}
 
 /* ========== 小屏手机 ========== */
 @media (max-width: 375px) {
