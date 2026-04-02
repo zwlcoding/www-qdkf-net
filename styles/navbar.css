@@ -6,7 +6,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
+  width: 100%;
   z-index: var(--z-fixed);
   height: 80px;
   transition: background-color var(--transition-normal) ease,
@@ -15,7 +15,7 @@
 }
 
 .navbar.is-scrolled {
-  background-color: rgba(250, 248, 245, 0.95);
+  background-color: rgba(250, 248, 245, 0.98);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: var(--shadow-sm);
