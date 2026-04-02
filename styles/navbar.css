@@ -14,9 +14,11 @@
   max-width: 100%;
   /* 修复移动端横向滚动条：裁剪溢出的子元素 */
   overflow: hidden;
-  transition: background-color var(--transition-normal) ease,
-              box-shadow var(--transition-normal) ease,
-              height var(--transition-normal) ease;
+  /* 默认透明背景，滚动时渐变 */
+  background-color: rgba(250, 248, 245, 0);
+  transition: background-color var(--transition-normal) var(--ease-out),
+              box-shadow var(--transition-normal) var(--ease-out),
+              height var(--transition-normal) var(--ease-out);
 }
 
 .navbar.is-scrolled {

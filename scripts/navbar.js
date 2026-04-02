@@ -1,4 +1,4 @@
-//**
+/**
  * 渊渟集团官网 - 导航栏交互
  */
 
@@ -65,7 +65,7 @@
    * 初始化事件监听
    */
   function init() {
-    // 滚动监听（使用 requestAnimationFrame 优化）
+    // 滚动监听
     let ticking = false;
     window.addEventListener('scroll', function() {
       if (!ticking) {
@@ -91,7 +91,7 @@
     }
 
     // 点击导航链接关闭菜单
-    navbarLinks.forEach(link => {
+    navbarLinks.forEach(function(link) {
       link.addEventListener('click', function() {
         if (isMenuOpen) {
           closeMenu();
